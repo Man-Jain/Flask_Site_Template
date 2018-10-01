@@ -20,7 +20,7 @@ def connect():
 	cur.execute("CREATE TABLE IF NOT EXISTS item(name TEXT,price INTEGER)")
 	con.commit()
 	con.close()
-	return 'OK'
+	return 'Connect OK'
 
 def insert(name,price):
 	con=sl.connect("price.db")
@@ -28,5 +28,5 @@ def insert(name,price):
 	cur.execute("INSERT INTO item values(?,?)",(name,price))
 	con.commit()
 	con.close()
-	return 'OK'
+	return 'Connect OK'
 
